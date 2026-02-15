@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATI Connections Map — Daria Riahuzova</title>
+<meta name="description" content="Interactive relationship visualization for the largest freight exchange in CIS — cutting verification time from 45 min to 7 min.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Daria Riahuzova</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about-section">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="Daria_Riahuzova_CV.pdf" target="_blank">Resume ↗</a>
+    </div>
+    <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="case-hero">
+  <a href="index.html" class="back-link">← Back to all work</a>
+  <h1>ATI Connections Map</h1>
+  <p>An interactive relationship visualization tool for the largest freight exchange in CIS — helping logistics companies verify partners in minutes instead of hours.</p>
+  <div class="case-meta">
+    <div class="case-meta-item"><div class="case-meta-label">Company</div><div class="case-meta-value">ATI.SU</div></div>
+    <div class="case-meta-item"><div class="case-meta-label">Role</div><div class="case-meta-value">Senior UX/UI Designer</div></div>
+    <div class="case-meta-item"><div class="case-meta-label">Year</div><div class="case-meta-value">2021</div></div>
+    <div class="case-meta-item"><div class="case-meta-label">Platform</div><div class="case-meta-value">Web (Desktop)</div></div>
+  </div>
+</div>
+
+<!-- Hero image -->
+<div class="case-section fade-in">
+  <div class="case-img-full">
+    <img src="images/ati/hero-laptop-mockup.jpg" alt="ATI Connections Map overview">
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Context -->
+<div class="case-section fade-in">
+  <h2>Context</h2>
+  <p>ATI.SU is the leading B2B freight exchange platform in CIS with 500K+ registered companies, 250K+ daily cargo listings, and 70K+ trucks. Users work with massive amounts of data that's nearly impossible to analyze manually.</p>
+  <p>In logistics, a critical challenge is quickly and reliably evaluating partners. In interviews, risk managers and sales reps reported spending up to 45–60 minutes collecting and cross-checking data across multiple registries before making a single decision.</p>
+</div>
+
+<hr class="divider">
+
+<!-- Discovery -->
+<div class="case-section fade-in">
+  <h2>Discovery & Research</h2>
+  <p>I conducted 12 in-depth interviews with risk managers, sales representatives, and account managers to understand their workflows and pain points.</p>
+
+  <div class="case-img-full">
+    <img src="images/ati/research-user-questions.png" alt="Research discovery: user pain-point questions">
+  </div>
+
+  <h3>Key insights</h3>
+  <ul>
+    <li>Verification of a single company required switching between 4–6 external registries and databases</li>
+    <li>Indirect connections (shared phone numbers, emails, founders) were the most valuable but hardest to find manually</li>
+    <li>Sales teams missed "warm lead" opportunities because relationships between companies weren't visible</li>
+    <li>Users needed different levels of detail — a quick overview vs. deep investigation</li>
+  </ul>
+</div>
+
+<hr class="divider">
+
+<!-- Design Approach -->
+<div class="case-section fade-in">
+  <h2>Design Approach</h2>
+  <p>The core challenge was representing complex, multi-layered relationship data in a way that's immediately understandable. I explored several approaches before landing on an interactive graph-based map.</p>
+
+  <h3>Why a graph map, not a table</h3>
+  <p>Tables work for linear data. But relationships are networks — a company can be linked to 5 others through a shared founder, who also has a phone number tied to 3 more entities. A spatial representation makes these patterns visible at a glance.</p>
+
+  <div class="case-img-full">
+    <img src="images/ati/map-full-graph.png" alt="Full connections map with company nodes">
+  </div>
+
+  <h3>Key design decisions</h3>
+  <ul>
+    <li><strong>Company cards instead of abstract nodes:</strong> Each node displays rating, location, registration number, recommendations, and complaints — users can make decisions without drilling in</li>
+    <li><strong>Visual encoding of tie strength:</strong> Direct ties (clones, related companies, founders) shown as strong lines; indirect ties (shared phone/email) shown as lighter connections</li>
+    <li><strong>Progressive disclosure:</strong> Start with closest connections, expand to 2–3 levels on demand, with smooth transitions preserving spatial context</li>
+    <li><strong>Hover-to-isolate:</strong> Hovering highlights one company's network while dimming the rest</li>
+    <li><strong>Export to PDF:</strong> Users can save the current map state for compliance documentation</li>
+  </ul>
+
+  <div class="case-img-grid">
+    <div><img src="images/ati/map-connection-detail.png" alt="Connection detail: company cards with ties"></div>
+    <div><img src="images/ati/map-node-hover.png" alt="Hover state showing company details"></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Results -->
+<div class="case-section fade-in">
+  <h2>Results</h2>
+  <div class="results-grid">
+    <div class="result-card"><div class="result-num">7 min</div><div class="result-text">Verification time, down from 45–60 min per company</div></div>
+    <div class="result-card"><div class="result-num">+22%</div><div class="result-text">Growth in paid subscription upgrades within first 3 months</div></div>
+    <div class="result-card"><div class="result-num">15K+</div><div class="result-text">Users adopted the feature within 3 months of launch</div></div>
+    <div class="result-card"><div class="result-num">+30%</div><div class="result-text">More "warm leads" identified by sales teams through indirect connections</div></div>
+  </div>
+  <p>1 in 3 new subscribers cited the connections map as their primary reason for upgrading (post-purchase survey). Day-1 retention: 72%. Day-7 retention: 54%.</p>
+</div>
+
+<!-- Contact CTA -->
+<div style="max-width:var(--max-w);margin:0 auto;padding:0 32px 60px">
+  <hr class="divider">
+  <div class="contact-bar" style="padding:40px 0">
+    <h2>Want to discuss this project?</h2>
+    <p>I'd love to walk you through the details.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/riahuzova" target="_blank" class="btn btn-primary">Contact on LinkedIn →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Daria Riahuzova · Senior Product Designer · Warsaw, Poland</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

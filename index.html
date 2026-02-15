@@ -7,268 +7,25 @@
 <meta name="description" content="Senior Product Designer with 10+ years shipping iGaming, SaaS, and B2B platforms across Africa, Asia, and LATAM.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #FAFAF8;
-  --text: #1A1A1A;
-  --text-secondary: #6B6B6B;
-  --accent: #2B5C8A;
-  --accent-light: #E8F0F7;
-  --border: #E5E5E3;
-  --card-bg: #FFFFFF;
-  --card-hover: #F5F5F3;
-  --tag-bg: #F0F0EE;
-  --max-w: 1120px;
-  --radius: 12px;
-}
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'DM Sans', -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* NAV */
-nav {
-  position: fixed; top:0; left:0; right:0; z-index:100;
-  background: rgba(250,250,248,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-nav .nav-inner {
-  max-width: var(--max-w); margin:0 auto; padding: 0 32px;
-  display:flex; align-items:center; justify-content:space-between; height:64px;
-}
-nav .logo { font-family:'DM Serif Display',serif; font-size:18px; color:var(--text); text-decoration:none; }
-nav .nav-links { display:flex; gap:32px; }
-nav .nav-links a {
-  font-size:14px; font-weight:500; color:var(--text-secondary); text-decoration:none;
-  transition: color 0.2s;
-}
-nav .nav-links a:hover { color:var(--text); }
-.menu-btn { display:none; background:none; border:none; cursor:pointer; padding:8px; }
-.menu-btn svg { width:24px; height:24px; stroke:var(--text); }
-
-/* HERO */
-.hero {
-  max-width: var(--max-w); margin:0 auto; padding: 140px 32px 80px;
-}
-.hero-tag {
-  display:inline-block; padding:6px 14px; background:var(--accent-light); color:var(--accent);
-  font-size:13px; font-weight:500; border-radius:20px; margin-bottom:24px;
-  letter-spacing: 0.02em;
-}
-.hero h1 {
-  font-family:'DM Serif Display',serif; font-size:clamp(36px,5vw,56px);
-  line-height:1.15; margin-bottom:24px; max-width:720px;
-}
-.hero p {
-  font-size:18px; line-height:1.7; color:var(--text-secondary); max-width:600px; margin-bottom:32px;
-}
-.hero-stats {
-  display:flex; gap:48px; margin-bottom:40px; flex-wrap:wrap;
-}
-.hero-stats .stat { display:flex; flex-direction:column; }
-.hero-stats .stat-num { font-family:'DM Serif Display',serif; font-size:32px; color:var(--accent); }
-.hero-stats .stat-label { font-size:13px; color:var(--text-secondary); margin-top:4px; }
-.hero-actions { display:flex; gap:16px; flex-wrap:wrap; }
-.btn {
-  display:inline-flex; align-items:center; gap:8px; padding:12px 24px;
-  font-size:14px; font-weight:500; border-radius:8px; text-decoration:none; transition: all 0.2s;
-  cursor:pointer; border:none; font-family:inherit;
-}
-.btn-primary { background:var(--accent); color:#fff; }
-.btn-primary:hover { background:#234B73; transform:translateY(-1px); }
-.btn-secondary { background:transparent; color:var(--text); border:1px solid var(--border); }
-.btn-secondary:hover { background:var(--card-hover); }
-
-/* SECTION */
-section { max-width:var(--max-w); margin:0 auto; padding:80px 32px; }
-.section-label {
-  font-size:12px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
-  color:var(--accent); margin-bottom:12px;
-}
-.section-title {
-  font-family:'DM Serif Display',serif; font-size:clamp(28px,3.5vw,40px);
-  line-height:1.2; margin-bottom:48px;
-}
-
-/* CASE CARDS ON HOME */
-.cases-grid { display:flex; flex-direction:column; gap:32px; }
-.case-card {
-  display:grid; grid-template-columns:1fr 1fr; gap:0;
-  background:var(--card-bg); border-radius:var(--radius); overflow:hidden;
-  border:1px solid var(--border); transition: all 0.3s; text-decoration:none; color:inherit;
-}
-.case-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.08); }
-.case-card:nth-child(even) { direction:rtl; }
-.case-card:nth-child(even) > * { direction:ltr; }
-.case-card-img {
-  aspect-ratio:4/3; overflow:hidden; background:var(--tag-bg);
-  display:flex; align-items:center; justify-content:center;
-}
-.case-card-img img { width:100%; height:100%; object-fit:cover; }
-.case-card-body { padding:40px; display:flex; flex-direction:column; justify-content:center; }
-.case-card-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
-.tag {
-  padding:4px 10px; background:var(--tag-bg); border-radius:4px;
-  font-size:12px; font-weight:500; color:var(--text-secondary);
-}
-.case-card-body h3 { font-family:'DM Serif Display',serif; font-size:24px; line-height:1.3; margin-bottom:12px; }
-.case-card-body p { font-size:15px; color:var(--text-secondary); line-height:1.6; margin-bottom:20px; }
-.case-card-body .case-result {
-  font-size:14px; font-weight:500; color:var(--accent); padding-top:16px;
-  border-top:1px solid var(--border);
-}
-
-/* CASE DETAIL PAGES */
-.case-page { display:none; }
-.case-page.active { display:block; }
-.case-hero {
-  max-width:var(--max-w); margin:0 auto; padding:120px 32px 60px;
-}
-.case-hero .back-link {
-  display:inline-flex; align-items:center; gap:6px; font-size:14px;
-  color:var(--text-secondary); text-decoration:none; margin-bottom:32px;
-  transition: color 0.2s;
-}
-.case-hero .back-link:hover { color:var(--text); }
-.case-hero h1 { font-family:'DM Serif Display',serif; font-size:clamp(32px,4vw,48px); line-height:1.2; margin-bottom:16px; }
-.case-hero > p { font-size:18px; color:var(--text-secondary); max-width:640px; margin-bottom:32px; line-height:1.7; }
-.case-meta { display:flex; gap:40px; flex-wrap:wrap; }
-.case-meta-item { }
-.case-meta-label { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-secondary); margin-bottom:4px; }
-.case-meta-value { font-size:15px; font-weight:500; }
-
-.case-section {
-  max-width:var(--max-w); margin:0 auto; padding:60px 32px;
-}
-.case-section h2 {
-  font-family:'DM Serif Display',serif; font-size:28px; margin-bottom:24px;
-}
-.case-section h3 { font-size:18px; font-weight:700; margin-bottom:12px; margin-top:32px; }
-.case-section p { font-size:16px; color:var(--text-secondary); line-height:1.7; margin-bottom:16px; max-width:680px; }
-.case-section ul { list-style:none; padding:0; margin-bottom:24px; }
-.case-section ul li {
-  position:relative; padding-left:20px; font-size:15px; color:var(--text-secondary);
-  line-height:1.7; margin-bottom:8px;
-}
-.case-section ul li::before {
-  content:''; position:absolute; left:0; top:10px;
-  width:8px; height:8px; border-radius:50%; background:var(--accent);
-}
-.case-img-full {
-  width:100%; border-radius:var(--radius); margin:32px 0;
-  border:1px solid var(--border); background:var(--tag-bg);
-  min-height:300px;
-  display:flex; align-items:center; justify-content:center;
-  color:var(--text-secondary); font-size:14px; font-style:italic;
-}
-.case-img-full img { width:100%; border-radius:var(--radius); }
-.case-img-grid {
-  display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:32px 0;
-}
-.case-img-grid > div {
-  border-radius:var(--radius); border:1px solid var(--border);
-  background:var(--tag-bg); min-height:240px;
-  display:flex; align-items:center; justify-content:center;
-  color:var(--text-secondary); font-size:14px; font-style:italic; overflow:hidden;
-}
-.case-img-grid > div img { width:100%; height:100%; object-fit:cover; }
-
-.results-grid {
-  display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:24px;
-  margin:32px 0;
-}
-.result-card {
-  padding:28px; background:var(--card-bg); border:1px solid var(--border); border-radius:var(--radius);
-}
-.result-card .result-num { font-family:'DM Serif Display',serif; font-size:36px; color:var(--accent); margin-bottom:8px; }
-.result-card .result-text { font-size:14px; color:var(--text-secondary); line-height:1.5; }
-
-.divider { border:none; border-top:1px solid var(--border); margin:0; }
-
-/* ABOUT */
-.about-grid {
-  display:grid; grid-template-columns:320px 1fr; gap:60px; align-items:start;
-}
-.about-photo {
-  width:100%; aspect-ratio:3/4; border-radius:var(--radius); background:var(--tag-bg);
-  overflow:hidden;
-  display:flex; align-items:center; justify-content:center;
-  color:var(--text-secondary); font-size:14px; font-style:italic;
-}
-.about-photo img { width:100%; height:100%; object-fit:cover; }
-.about-text h2 { font-family:'DM Serif Display',serif; font-size:32px; margin-bottom:20px; }
-.about-text p { font-size:16px; color:var(--text-secondary); line-height:1.7; margin-bottom:16px; }
-.about-text .skills-grid { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; }
-
-/* CONTACT */
-.contact-bar {
-  max-width:var(--max-w); margin:0 auto; padding:60px 32px;
-  text-align:center;
-}
-.contact-bar h2 { font-family:'DM Serif Display',serif; font-size:32px; margin-bottom:12px; }
-.contact-bar p { color:var(--text-secondary); margin-bottom:24px; }
-.contact-links { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-
-/* FOOTER */
-footer {
-  border-top:1px solid var(--border); padding:32px;
-  text-align:center; font-size:13px; color:var(--text-secondary);
-}
-
-/* MOBILE */
-@media (max-width:768px) {
-  .hero { padding:100px 20px 60px; }
-  .hero-stats { gap:32px; }
-  .case-card { grid-template-columns:1fr; }
-  .case-card:nth-child(even) { direction:ltr; }
-  .case-card-body { padding:24px; }
-  .case-img-grid { grid-template-columns:1fr; }
-  .about-grid { grid-template-columns:1fr; gap:32px; }
-  .about-photo { max-width:280px; }
-  section { padding:60px 20px; }
-  .case-hero { padding:100px 20px 40px; }
-  .case-section { padding:40px 20px; }
-  nav .nav-links { display:none; }
-  nav .nav-links.open {
-    display:flex; flex-direction:column; position:absolute;
-    top:64px; left:0; right:0; background:var(--bg);
-    border-bottom:1px solid var(--border); padding:20px 32px; gap:16px;
-  }
-  .menu-btn { display:block; }
-  .results-grid { grid-template-columns:1fr 1fr; }
-}
-@media (max-width:480px) {
-  .results-grid { grid-template-columns:1fr; }
-  .hero-stats { gap:24px; }
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="logo" onclick="showHome(event)">Daria Riahuzova</a>
+    <a href="index.html" class="logo">Daria Riahuzova</a>
     <div class="nav-links" id="navLinks">
-      <a href="#work" onclick="showHome(event)">Work</a>
-      <a href="#about-section" onclick="showHome(event)">About</a>
-      <a href="#contact" onclick="showHome(event)">Contact</a>
-      <a href="/Daria_Riahuzova_CV.pdf" target="_blank">Resume ↗</a>
+      <a href="#work">Work</a>
+      <a href="#about-section">About</a>
+      <a href="#contact">Contact</a>
+      <a href="Daria_Riahuzova_CV.pdf" target="_blank">Resume ↗</a>
     </div>
     <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
 </nav>
-
-<!-- ===================== HOME PAGE ===================== -->
-<div id="home-page">
 
 <!-- HERO -->
 <div class="hero">
@@ -293,11 +50,10 @@ footer {
   <h2 class="section-title">Case studies</h2>
   <div class="cases-grid">
 
-    <!-- CASE 1: ATI Map -->
-    <a class="case-card" href="#" onclick="showCase('ati',event)">
+    <!-- ATI Map -->
+    <a class="case-card fade-in" href="case-ati.html">
       <div class="case-card-img">
-        <!-- Replace src with your actual screenshot -->
-        <img src="images/ati/ati-01.jpg" alt="ATI Connections Map">
+        <img src="images/ati/hero-laptop-mockup.jpg" alt="ATI Connections Map" loading="lazy">
       </div>
       <div class="case-card-body">
         <div class="case-card-tags"><span class="tag">B2B SaaS</span><span class="tag">UX Research</span><span class="tag">Data Visualization</span></div>
@@ -307,10 +63,10 @@ footer {
       </div>
     </a>
 
-    <!-- CASE 2: SDUI -->
-    <a class="case-card" href="#" onclick="showCase('sdui',event)">
+    <!-- SDUI -->
+    <a class="case-card fade-in" href="case-sdui.html">
       <div class="case-card-img">
-        <img src="images/sdui/sdui-01.jpg" alt="SDUI Page Builder">
+        <img src="images/sdui/builder-laptop-mockup.jpg" alt="SDUI Page Builder" loading="lazy">
       </div>
       <div class="case-card-body">
         <div class="case-card-tags"><span class="tag">iGaming</span><span class="tag">Internal Tool</span><span class="tag">SDUI</span></div>
@@ -320,10 +76,10 @@ footer {
       </div>
     </a>
 
-    <!-- CASE 3: NDABET -->
-    <a class="case-card" href="#" onclick="showCase('ndabet',event)">
+    <!-- NDABET -->
+    <a class="case-card fade-in" href="case-ndabet.html">
       <div class="case-card-img">
-        <img src="images/ndabet/ndabet-08.png" alt="Betting Platform Redesign">
+        <img src="images/ndabet/hero-phone-cricket.png" alt="Betting Platform Redesign" loading="lazy">
       </div>
       <div class="case-card-body">
         <div class="case-card-tags"><span class="tag">iGaming</span><span class="tag">Multi-region</span><span class="tag">Design System</span></div>
@@ -333,10 +89,10 @@ footer {
       </div>
     </a>
 
-    <!-- CASE 4: Estatik -->
-    <a class="case-card" href="#" onclick="showCase('estatik',event)">
+    <!-- Estatik -->
+    <a class="case-card fade-in" href="case-estatik.html">
       <div class="case-card-img">
-        <img src="images/estatik/estatik-18.jpg" alt="Estatik Real Estate Plugin">
+        <img src="images/estatik/hero-mockup-desktop.jpg" alt="Estatik Real Estate Plugin" loading="lazy">
       </div>
       <div class="case-card-body">
         <div class="case-card-tags"><span class="tag">WordPress</span><span class="tag">Real Estate</span><span class="tag">B2B/B2C</span></div>
@@ -354,8 +110,7 @@ footer {
   <div class="section-label">About</div>
   <div class="about-grid">
     <div class="about-photo">
-      <!-- Replace with your photo -->
-      <img src="images/about/about-03.jpg" alt="Daria Riahuzova">
+      <img src="images/about/photo-portrait.jpg" alt="Daria Riahuzova">
     </div>
     <div class="about-text">
       <h2>Hi, I'm Daria</h2>
@@ -399,370 +154,22 @@ footer {
   </div>
 </div>
 
-</div><!-- end home-page -->
-
-
-<!-- ===================== CASE: ATI MAP ===================== -->
-<div class="case-page" id="case-ati">
-  <div class="case-hero">
-    <a href="#" class="back-link" onclick="showHome(event)">← Back to all work</a>
-    <h1>ATI Connections Map</h1>
-    <p>An interactive relationship visualization tool for the largest freight exchange in CIS — helping logistics companies verify partners in minutes instead of hours.</p>
-    <div class="case-meta">
-      <div class="case-meta-item"><div class="case-meta-label">Company</div><div class="case-meta-value">ATI.SU</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Role</div><div class="case-meta-value">Senior UX/UI Designer</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Year</div><div class="case-meta-value">2021</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Platform</div><div class="case-meta-value">Web (Desktop)</div></div>
-    </div>
-  </div>
-
-  <div class="case-section">
-    <h2>Context</h2>
-    <p>ATI.SU is the leading B2B freight exchange platform in CIS with 500K+ registered companies, 250K+ daily cargo listings, and 70K+ trucks. Users work with massive amounts of data that's nearly impossible to analyze manually.</p>
-    <p>In logistics, a critical challenge is quickly and reliably evaluating partners. In interviews, risk managers and sales reps reported spending up to 45–60 minutes collecting and cross-checking data across multiple registries before making a single decision.</p>
-    <div class="case-img-full"><img src="images/ati/ati-05.png" alt="ATI platform overview"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Discovery & Research</h2>
-    <p>I conducted 12 in-depth interviews with risk managers, sales representatives, and account managers to understand their workflows and pain points.</p>
-    <h3>Key insights</h3>
-    <ul>
-      <li>Verification of a single company required switching between 4–6 external registries and databases</li>
-      <li>Indirect connections (shared phone numbers, emails, founders) were the most valuable but hardest to find manually</li>
-      <li>Sales teams missed "warm lead" opportunities because relationships between companies weren't visible</li>
-      <li>Users needed different levels of detail — a quick overview vs. deep investigation</li>
-    </ul>
-    <div class="case-img-full"><img src="images/ati/ati-02.png" alt="ATI research artifacts"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Design Approach</h2>
-    <p>The core challenge was representing complex, multi-layered relationship data in a way that's immediately understandable. I explored several approaches before landing on an interactive graph-based map.</p>
-
-    <h3>Why a graph map, not a table</h3>
-    <p>Tables work for linear data. But relationships are networks — a company can be linked to 5 others through a shared founder, who also has a phone number tied to 3 more entities. A spatial representation makes these patterns visible at a glance.</p>
-
-    <h3>Key design decisions</h3>
-    <ul>
-      <li><strong>Company cards instead of abstract nodes:</strong> Each node displays rating, location, registration number, recommendations, and complaints — users can make decisions without drilling in</li>
-      <li><strong>Visual encoding of tie strength:</strong> Direct ties (clones, related companies, founders) shown as strong lines; indirect ties (shared phone/email) shown as lighter connections</li>
-      <li><strong>Progressive disclosure:</strong> Start with closest connections, expand to 2–3 levels on demand, with smooth transitions preserving spatial context</li>
-      <li><strong>Hover-to-isolate:</strong> Hovering highlights one company's network while dimming the rest</li>
-      <li><strong>Export to PDF:</strong> Users can save the current map state for compliance documentation</li>
-    </ul>
-    <div class="case-img-grid">
-      <div><img src="images/ati/ati-03.png" alt="ATI wireframes"></div>
-      <div><img src="images/ati/ati-04.png" alt="ATI map UI"></div>
-    </div>
-    <div class="case-img-full"><img src="images/ati/ati-01.jpg" alt="ATI map interaction detail"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Results</h2>
-    <div class="results-grid">
-      <div class="result-card"><div class="result-num">7 min</div><div class="result-text">Verification time, down from 45–60 min per company</div></div>
-      <div class="result-card"><div class="result-num">+22%</div><div class="result-text">Growth in paid subscription upgrades within first 3 months</div></div>
-      <div class="result-card"><div class="result-num">15K+</div><div class="result-text">Users adopted the feature within 3 months of launch</div></div>
-      <div class="result-card"><div class="result-num">+30%</div><div class="result-text">More "warm leads" identified by sales teams through indirect connections</div></div>
-    </div>
-    <p>1 in 3 new subscribers cited the connections map as their primary reason for upgrading (post-purchase survey). Day-1 retention: 72%. Day-7 retention: 54%.</p>
-  </div>
-
-  <div id="contact-case" style="max-width:var(--max-w);margin:0 auto;padding:0 32px 60px">
-    <hr class="divider">
-    <div class="contact-bar" style="padding:40px 0"><h2>Want to discuss this project?</h2><p>I'd love to walk you through the details.</p><div class="contact-links"><a href="https://www.linkedin.com/in/riahuzova" target="_blank" class="btn btn-primary">Contact on LinkedIn →</a></div></div>
-  </div>
-</div>
-
-
-<!-- ===================== CASE: SDUI ===================== -->
-<div class="case-page" id="case-sdui">
-  <div class="case-hero">
-    <a href="#" class="back-link" onclick="showHome(event)">← Back to all work</a>
-    <h1>SDUI Page Builder</h1>
-    <p>A visual builder that empowers regional operators to manage gambling platform interfaces independently — fast, intuitive, and without developer involvement.</p>
-    <div class="case-meta">
-      <div class="case-meta-item"><div class="case-meta-label">Company</div><div class="case-meta-value">Growe</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Role</div><div class="case-meta-value">Lead Product Designer</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Year</div><div class="case-meta-value">2024–2025</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Platform</div><div class="case-meta-value">Web (Internal Tool)</div></div>
-    </div>
-  </div>
-
-  <div class="case-section">
-    <h2>Context</h2>
-    <p>Growe operates iGaming brands across Africa, Asia, and Latin America. Each region has unique regulatory requirements, player preferences, and promotional calendars. Regional operators needed to update platform content constantly — new promotions, seasonal layouts, localized widgets.</p>
-    <p>The problem: every interface change required a developer. A simple homepage update could take 2–3 weeks from request to deployment.</p>
-    <div class="case-img-full"><img src="images/sdui/sdui-06.jpg" alt="SDUI context"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Discovery</h2>
-    <p>I interviewed 6 regional operators and 4 product managers to map the end-to-end content update workflow. The bottleneck was clear: operators knew exactly what they wanted but had no way to execute without engineering support.</p>
-    <h3>Key pain points</h3>
-    <ul>
-      <li>2–3 week turnaround for any page or layout change</li>
-      <li>Operators couldn't run A/B tests on page layouts independently</li>
-      <li>Different regions needed different widget configurations, but the platform was one-size-fits-all</li>
-      <li>Promotional windows were often missed because of deployment delays</li>
-    </ul>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Design Solution</h2>
-    <p>I designed SDUI Builder — a visual interface where operators can configure pages by dragging and dropping pre-built widgets, editing content inline, and publishing changes instantly.</p>
-
-    <h3>Core capabilities</h3>
-    <ul>
-      <li><strong>Layout management:</strong> Configure pages per channel (Mobile, Desktop, Android, iOS) and per market</li>
-      <li><strong>Widget library:</strong> Sports listings, casino carousels, promotions, jackpots, live streams, leaderboards, and more</li>
-      <li><strong>Drag & drop:</strong> Rearrange widgets, add or remove sections visually</li>
-      <li><strong>Inline editing:</strong> Update widget content directly in the builder preview</li>
-      <li><strong>Segmentation:</strong> Tailor layouts to specific player segments (VIPs vs. newcomers)</li>
-      <li><strong>Change history:</strong> Track all updates with full audit trail for compliance</li>
-      <li><strong>Layout cloning:</strong> Duplicate pages across markets, then localize</li>
-    </ul>
-    <div class="case-img-grid">
-      <div><img src="images/sdui/sdui-02.jpg" alt="SDUI builder interface"></div>
-      <div><img src="images/sdui/sdui-04.png" alt="SDUI widget configuration"></div>
-    </div>
-    <div class="case-img-full"><img src="images/sdui/sdui-03.jpg" alt="SDUI builder workflow"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Results</h2>
-    <div class="results-grid">
-      <div class="result-card"><div class="result-num">&lt;24h</div><div class="result-text">Page launch time, down from 2–3 weeks</div></div>
-      <div class="result-card"><div class="result-num">0</div><div class="result-text">Developer involvement needed for content changes</div></div>
-      <div class="result-card"><div class="result-num">5+</div><div class="result-text">Regional markets using the builder independently</div></div>
-    </div>
-    <p>Operators gained full autonomy to localize content, run layout experiments, and respond to market opportunities in real time. The platform became significantly faster and more competitive as a result.</p>
-  </div>
-
-  <div style="max-width:var(--max-w);margin:0 auto;padding:0 32px 60px">
-    <hr class="divider">
-    <div class="contact-bar" style="padding:40px 0"><h2>Want to discuss this project?</h2><p>I'd love to walk you through the details.</p><div class="contact-links"><a href="https://www.linkedin.com/in/riahuzova" target="_blank" class="btn btn-primary">Contact on LinkedIn →</a></div></div>
-  </div>
-</div>
-
-
-<!-- ===================== CASE: NDABET ===================== -->
-<div class="case-page" id="case-ndabet">
-  <div class="case-hero">
-    <a href="#" class="back-link" onclick="showHome(event)">← Back to all work</a>
-    <h1>Sports Betting & Casino Platform Redesign</h1>
-    <p>A full-scale redesign of a multi-region betting platform — from fragmented UX to a unified, conversion-driven product serving Africa, Asia, and Latin America.</p>
-    <div class="case-meta">
-      <div class="case-meta-item"><div class="case-meta-label">Company</div><div class="case-meta-value">Growe (NDA)</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Role</div><div class="case-meta-value">Lead Product Designer</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Year</div><div class="case-meta-value">2023–2025</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Platform</div><div class="case-meta-value">Mobile-first, Responsive Web</div></div>
-    </div>
-  </div>
-
-  <div class="case-section">
-    <h2>Context</h2>
-    <p>The platform is a global betting product operating across Africa, Asia, and LATAM. It combines sports betting, live betting, and casino in a single product. When I joined, the platform suffered from fragmented UX, outdated visuals, and heavy developer dependency for any content changes.</p>
-    <h3>Challenges</h3>
-    <ul>
-      <li>Fragmented experience across sports, live, and casino sections — each felt like a separate product</li>
-      <li>Outdated visuals creating low trust, especially in competitive markets</li>
-      <li>Weak localization — one-size-fits-all approach for vastly different markets</li>
-      <li>High friction in the betslip and deposit flows leading to significant drop-offs</li>
-      <li>Regional operators relied on developers for every page change</li>
-    </ul>
-    <div class="case-img-grid">
-      <div><img src="images/ndabet/ndabet-03.png" alt="Platform before redesign"></div>
-      <div><img src="images/ndabet/ndabet-05.png" alt="Platform after redesign"></div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>My Approach</h2>
-    <p>I started by mapping the entire user journey across all three verticals (sports, live, casino) to identify where the experience broke down. The biggest conversion leak was in the deposit flow — a 6-step onboarding funnel that lost nearly half of new users.</p>
-
-    <h3>Key design decisions</h3>
-    <ul>
-      <li><strong>Unified navigation:</strong> Merged sports, live, and casino into a single coherent product with consistent patterns, shared components, and smooth transitions between sections</li>
-      <li><strong>Deposit flow simplification:</strong> Reduced from 6 steps to 3, with local payment methods pre-selected by region</li>
-      <li><strong>Multi-theme design system:</strong> Built a token-based system in Figma with 200+ components, supporting multiple brand themes and RTL layouts for future market expansion</li>
-      <li><strong>Widget-based homepage:</strong> Regional operators can build pages from flexible widgets (SDUI Builder — <a href="#" onclick="showCase('sdui',event)" style="color:var(--accent)">see separate case study</a>)</li>
-      <li><strong>Localized payments:</strong> Region-specific payment UX adapted to local habits and regulations</li>
-    </ul>
-    <div class="case-img-full"><img src="images/ndabet/ndabet-01.png" alt="Design system overview"></div>
-    <div class="case-img-grid">
-      <div><img src="images/ndabet/ndabet-10.png" alt="Sports betting screens"></div>
-      <div><img src="images/ndabet/ndabet-12.png" alt="Casino experience"></div>
-    </div>
-    <div class="case-img-full"><img src="images/ndabet/ndabet-16.png" alt="Platform screens overview"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Results</h2>
-    <div class="results-grid">
-      <div class="result-card"><div class="result-num">~18%</div><div class="result-text">Improvement in deposit conversion rate after funnel redesign</div></div>
-      <div class="result-card"><div class="result-num">5</div><div class="result-text">Regional markets served with a single, adaptable platform</div></div>
-      <div class="result-card"><div class="result-num">200+</div><div class="result-text">Components in the multi-theme design system</div></div>
-      <div class="result-card"><div class="result-num">~40%</div><div class="result-text">Reduction in UI inconsistency tickets after design system adoption</div></div>
-    </div>
-    <p>The platform evolved into a globally consistent yet regionally adaptive product — faster, more intuitive, and significantly easier to scale. The design system was adopted by 3 product teams, and regional operators gained full autonomy through the SDUI builder.</p>
-  </div>
-
-  <div style="max-width:var(--max-w);margin:0 auto;padding:0 32px 60px">
-    <hr class="divider">
-    <div class="contact-bar" style="padding:40px 0"><h2>Want to discuss this project?</h2><p>I'd love to walk you through the details.</p><div class="contact-links"><a href="https://www.linkedin.com/in/riahuzova" target="_blank" class="btn btn-primary">Contact on LinkedIn →</a></div></div>
-  </div>
-</div>
-
-
-<!-- ===================== CASE: ESTATIK ===================== -->
-<div class="case-page" id="case-estatik">
-  <div class="case-hero">
-    <a href="#" class="back-link" onclick="showHome(event)">← Back to all work</a>
-    <h1>Estatik — Real Estate WordPress Plugin</h1>
-    <p>Complete design overhaul of a WordPress real estate plugin used by 10K+ websites globally — from user research to design system and developer handoff.</p>
-    <div class="case-meta">
-      <div class="case-meta-item"><div class="case-meta-label">Company</div><div class="case-meta-value">Estatik (US-based)</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Role</div><div class="case-meta-value">Product Designer</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Year</div><div class="case-meta-value">2019–2021</div></div>
-      <div class="case-meta-item"><div class="case-meta-label">Platform</div><div class="case-meta-value">WordPress Plugin (Web)</div></div>
-    </div>
-  </div>
-
-  <div class="case-section">
-    <h2>Context</h2>
-    <p>Estatik is a professional WordPress plugin that helps real estate agents and agencies build full-featured property websites. It serves customers from single-agent sites to large real estate portals, with 10K+ active installations worldwide.</p>
-    <p>I was responsible for the full product experience — from research and UX architecture to visual design and design system.</p>
-    <div class="case-img-full"><img src="images/estatik/estatik-07.png" alt="Estatik overview"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Research & Insights</h2>
-    <p>We conducted market analysis and customer interviews to identify the main pain points. The findings shaped the entire product architecture.</p>
-    <h3>Key findings</h3>
-    <ul>
-      <li>Registration and login processes were cumbersome — many users abandoned signup</li>
-      <li>Navigation between property lists, templates, and settings was confusing, leading to frequent errors</li>
-      <li>Inconsistent labeling and unclear icons caused misinterpretation of key information</li>
-      <li>Long submission forms with unnecessary fields resulted in incomplete listings</li>
-      <li>Visitors struggled to filter properties by multiple criteria simultaneously</li>
-    </ul>
-    <div class="case-img-full"><img src="images/estatik/estatik-16.jpg" alt="Estatik UX research"></div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Design Approach</h2>
-    <p>For complex workflows, I created detailed wireframes and flowcharts to align the team early and validate user flows before investing in high-fidelity design.</p>
-    <ul>
-      <li>91 wireframes covering all major user flows</li>
-      <li>Interactive prototypes for usability testing</li>
-      <li>Detailed design specifications for developers, including component behavior, responsive rules, and interaction details</li>
-      <li>A design system based on atomic design principles, ensuring consistent interfaces and speeding up future development</li>
-    </ul>
-
-    <h3>Key solutions</h3>
-    <ul>
-      <li><strong>Flexible property listing pages:</strong> Site owners can customize display; visitors can browse and filter intuitively</li>
-      <li><strong>Half-map page:</strong> Marker clustering, custom pins, clickable regions, and pop-ups with essential property details</li>
-      <li><strong>Simplified property publishing:</strong> Intuitive dashboard replacing clunky WordPress forms; admin controls which fields are shown</li>
-      <li><strong>Subscription & paid listings:</strong> Flexible membership packages with custom duration, listing limits, and featured slots</li>
-      <li><strong>Template system:</strong> Multiple listing page templates to fit various business needs</li>
-    </ul>
-    <div class="case-img-grid">
-      <div><img src="images/estatik/estatik-15.png" alt="Property listing page"></div>
-      <div><img src="images/estatik/estatik-11.png" alt="Map view"></div>
-    </div>
-    <div class="case-img-grid">
-      <div><img src="images/estatik/estatik-14.png" alt="Publishing flow"></div>
-      <div><img src="images/estatik/estatik-30.png" alt="Design system UI kit"></div>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="case-section">
-    <h2>Results</h2>
-    <div class="results-grid">
-      <div class="result-card"><div class="result-num">10K+</div><div class="result-text">Active websites using the plugin globally</div></div>
-      <div class="result-card"><div class="result-num">+22%</div><div class="result-text">Increase in user engagement (time on page, saved searches)</div></div>
-      <div class="result-card"><div class="result-num">+15%</div><div class="result-text">Improvement in trial-to-paid conversion</div></div>
-      <div class="result-card"><div class="result-num">~35%</div><div class="result-text">Reduction in design-to-dev handoff time thanks to design system</div></div>
-    </div>
-    <p>The redesign simplified property publishing and searching, reduced errors during submission, and improved the experience for both administrators and end users. Trustpilot reviews consistently highlight the plugin's usability and support quality.</p>
-  </div>
-
-  <div style="max-width:var(--max-w);margin:0 auto;padding:0 32px 60px">
-    <hr class="divider">
-    <div class="contact-bar" style="padding:40px 0"><h2>Want to discuss this project?</h2><p>I'd love to walk you through the details.</p><div class="contact-links"><a href="https://www.linkedin.com/in/riahuzova" target="_blank" class="btn btn-primary">Contact on LinkedIn →</a></div></div>
-  </div>
-</div>
-
-
 <!-- FOOTER -->
 <footer>
   <p>© 2026 Daria Riahuzova · Senior Product Designer · Warsaw, Poland</p>
 </footer>
 
 <script>
-function showHome(e) {
-  if(e) e.preventDefault();
-  document.getElementById('home-page').style.display = 'block';
-  document.querySelectorAll('.case-page').forEach(p => p.classList.remove('active'));
-  window.scrollTo({top:0, behavior:'smooth'});
-  document.getElementById('navLinks').classList.remove('open');
-  history.pushState(null, '', '/');
-}
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
 
-function showCase(id, e) {
-  if(e) e.preventDefault();
-  document.getElementById('home-page').style.display = 'none';
-  document.querySelectorAll('.case-page').forEach(p => p.classList.remove('active'));
-  document.getElementById('case-'+id).classList.add('active');
-  window.scrollTo({top:0, behavior:'smooth'});
-  document.getElementById('navLinks').classList.remove('open');
-  history.pushState(null, '', '#case-'+id);
-}
-
-// Handle back button
-window.addEventListener('popstate', () => {
-  const hash = window.location.hash;
-  if(hash && hash.startsWith('#case-')) {
-    const id = hash.replace('#case-','');
-    showCase(id);
-  } else {
-    showHome();
-  }
-});
-
-// Handle direct links
-window.addEventListener('DOMContentLoaded', () => {
-  const hash = window.location.hash;
-  if(hash && hash.startsWith('#case-')) {
-    const id = hash.replace('#case-','');
-    showCase(id);
-  }
-});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
 </body>
