@@ -181,6 +181,7 @@ section { max-width: var(--max-w); margin: 0 auto; padding: 80px 32px; }
   content: ''; position: absolute; left: 0; top: 10px;
   width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
 }
+.case-section > *:last-child { margin-bottom: 0; }
 
 /* Full-width image */
 .case-img-full {
