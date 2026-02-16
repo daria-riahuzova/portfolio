@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StillSpace — Mental Health Companion App — Daria Riahuzova</title>
+<title>Still Space — Mental Health Companion App — Daria Riahuzova</title>
 <meta name="description" content="From zero to App Store in 4 days — a mental health companion app designed and built with AI, for people living with depression and burnout.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
 <!-- HERO -->
 <div class="case-hero">
   <a href="index.html" class="back-link">&larr; Back to all work</a>
-  <h1>StillSpace — A Quiet Place to Land</h1>
+  <h1>Still Space — A Quiet Place to Land</h1>
   <p>A mental health companion app for people living with depression, burnout, and emotional overload. Designed and shipped from zero to App Store in 4 days — product vision, UX, visual design, tone of voice, and a fully functional iOS app built with AI.</p>
   <div class="case-meta">
     <div class="case-meta-item"><div class="case-meta-label">Project</div><div class="case-meta-value">Personal / 0 &rarr; 1</div></div>
@@ -106,7 +106,7 @@
 <!-- UX Tone & Voice -->
 <div class="case-section fade-in">
   <h2>UX Tone &amp; Voice</h2>
-  <p>Every word in StillSpace is a design decision. The voice is caring, calm, and accepting.</p>
+  <p>Every word in Still Space is a design decision. The voice is caring, calm, and accepting.</p>
   <p class="tone-intro">Role: not a therapist, not a coach — a person sitting beside you.</p>
 
   <div class="tone-grid">
@@ -189,7 +189,7 @@
       </div>
     </div>
     <div class="ds-card">
-      <div class="ds-card-title">Spacing &amp; radii</div>
+      <div class="ds-card-title">Spacing &amp; corners</div>
       <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:32px"></div><div class="ds-spacing-label">8pt &middot; xs</div></div>
       <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:64px"></div><div class="ds-spacing-label">16pt &middot; md</div></div>
       <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:96px"></div><div class="ds-spacing-label">24pt &middot; xl</div></div>
@@ -211,38 +211,51 @@
   <h3>Mood check-in &rarr; Adaptive actions &rarr; Journal</h3>
   <p>Three energy levels. No complex questionnaires. The app responds with micro-activities matched to your current state — from "place your hand on your chest" to "go outside, buy coffee."</p>
 
-  <div class="flow-strip">
-    <div>
-      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-1.png" alt="Mood check-in — select energy level" loading="lazy"></div>
-      <div class="flow-label">Check-in</div>
+  <!-- Flow map -->
+  <div class="flow-map fade-in">
+    <div class="flow-row">
+      <div class="flow-node">
+        <div class="phone-mockup" style="width:200px"><img src="images/stillspace/1-mood-1.png" alt="Mood check-in" loading="lazy"></div>
+        <div class="flow-label">Mood Check-in</div>
+        <div class="flow-sublabel">How are you feeling?</div>
+      </div>
+      <div class="flow-connector"><svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h50m-8-6l8 6-8 6" stroke="#2B5C8A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span class="flow-action">Select level</span></div>
+      <div class="flow-node">
+        <div class="phone-mockup" style="width:200px"><img src="images/stillspace/1-mood-1-1.png" alt="Energy level selected" loading="lazy"></div>
+        <div class="flow-label">Energy Level</div>
+        <div class="flow-sublabel">Safe / Gentle / Air</div>
+      </div>
+      <div class="flow-connector"><svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h50m-8-6l8 6-8 6" stroke="#2B5C8A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span class="flow-action">Get suggestion</span></div>
+      <div class="flow-node">
+        <div class="phone-mockup" style="width:200px"><img src="images/stillspace/1-mood-2.png" alt="Action suggestion" loading="lazy"></div>
+        <div class="flow-label">Micro-action</div>
+        <div class="flow-sublabel">~150 tasks by level</div>
+      </div>
     </div>
-    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div>
-      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-1-1.png" alt="Energy level — heavy day" loading="lazy"></div>
-      <div class="flow-label">Energy level</div>
+    <div class="flow-row" style="justify-content:flex-end;margin-top:16px">
+      <div class="flow-connector flow-connector-down"><svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0v30m-6-8l6 8 6-8" stroke="#2B5C8A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span class="flow-action">Done / Skip</span></div>
     </div>
-    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div>
-      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-2.png" alt="Adaptive action suggestion" loading="lazy"></div>
-      <div class="flow-label">Action</div>
-    </div>
-    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div>
-      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-3.png" alt="Completion — small win recorded" loading="lazy"></div>
-      <div class="flow-label">Small win</div>
-    </div>
-    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div>
-      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/2-diary.png" alt="Journal — mood chart and insights" loading="lazy"></div>
-      <div class="flow-label">Journal</div>
+    <div class="flow-row" style="justify-content:flex-end">
+      <div class="flow-node">
+        <div class="phone-mockup" style="width:200px"><img src="images/stillspace/1-mood-3.png" alt="Completion" loading="lazy"></div>
+        <div class="flow-label">Small Win</div>
+        <div class="flow-sublabel">Record &amp; celebrate</div>
+      </div>
+      <div class="flow-connector flow-connector-reverse"><svg width="60" height="24" viewBox="0 0 60 24"><path d="M60 12h-50m8-6l-8 6 8 6" stroke="#2B5C8A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span class="flow-action">View history</span></div>
+      <div class="flow-node">
+        <div class="phone-mockup" style="width:200px"><img src="images/stillspace/2-diary.png" alt="Journal" loading="lazy"></div>
+        <div class="flow-label">Journal</div>
+        <div class="flow-sublabel">Mood chart &amp; insights</div>
+      </div>
     </div>
   </div>
 
-  <h3>Just Be Together</h3>
-  <p>For when you can't do anything — and that's okay. A breathing circle with gentle animation, heartbeat haptics, and ambient sound. No instructions, no timers. Just presence.</p>
-
-  <h3>Crisis support</h3>
-  <p>Verified helpline numbers always one tap away — contextualized by language (Ukrainian, English, Russian). Direct access to professional psychological support.</p>
+  <h3>Alternative paths</h3>
+  <ul>
+    <li><strong>Just Be Together:</strong> For when you can't do anything — a breathing circle with heartbeat haptics and ambient sound. No instructions, no timers. Just presence.</li>
+    <li><strong>Crisis support:</strong> Verified helpline numbers always one tap away — contextualized by language. Direct access to professional psychological support.</li>
+    <li><strong>Quick wins:</strong> Record small victories anytime — opened a window, drank water. That counts.</li>
+  </ul>
 </div>
 
 <hr class="divider">
@@ -250,12 +263,12 @@
 <!-- Building with AI -->
 <div class="case-section fade-in">
   <h2>Building with AI</h2>
-  <p>StillSpace was designed and developed with Claude (Anthropic) as a creative and engineering partner. This wasn't about replacing design thinking — it was about amplifying it.</p>
+  <p>Still Space was designed and developed with Claude (Anthropic) as a creative and engineering partner. This wasn't about replacing design thinking — it was about amplifying it.</p>
 
   <h3>What AI enabled</h3>
   <ul>
     <li><strong>Rapid prototyping:</strong> From concept sketches to working SwiftUI code in hours, not weeks</li>
-    <li><strong>Content creation at scale:</strong> ~150 localized self-care tasks across 3 energy levels and 3 languages, each carefully crafted for tone and clinical appropriateness</li>
+    <li><strong>Content creation at scale:</strong> ~150 localized self-care tasks across 3 energy levels and multiple languages, each carefully crafted for tone and clinical appropriateness</li>
     <li><strong>Design system as code:</strong> Color tokens, typography, spacing — defined once in design, immediately reflected in production code</li>
     <li><strong>Iteration speed:</strong> Testing ideas in real code instead of static mockups — seeing how animations feel, how copy reads in context, how flows connect</li>
   </ul>
@@ -278,7 +291,7 @@
     <li><strong>SwiftUI</strong> — native iOS, zero external dependencies</li>
     <li><strong>100% offline-first</strong> — optional iCloud sync for backup</li>
     <li><strong>Zero data collection</strong> — no accounts, no analytics, no ads</li>
-    <li><strong>3 languages</strong> — Ukrainian, English, Russian</li>
+    <li><strong>Multilingual</strong> — Ukrainian and English</li>
     <li><strong>Accessibility</strong> — WCAG AA contrast, Dynamic Type, VoiceOver, minimum 44pt touch targets</li>
     <li><strong>Dark &amp; light themes</strong> — warm palette in both modes</li>
   </ul>
