@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StillSpace — Mental Health Companion App — Daria Riahuzova</title>
+<meta name="description" content="From zero to App Store in 4 days — a mental health companion app designed and built with AI, for people living with depression and burnout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Daria Riahuzova</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#about-section">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="Daria_Riahuzova_CV.pdf" target="_blank">Resume ↗</a>
+    </div>
+    <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="case-hero">
+  <a href="index.html" class="back-link">&larr; Back to all work</a>
+  <h1>StillSpace — A Quiet Place to Land</h1>
+  <p>A mental health companion app for people living with depression, burnout, and emotional overload. Designed and shipped from zero to App Store in 4 days — product vision, UX, visual design, tone of voice, and a fully functional iOS app built with AI.</p>
+  <div class="case-meta">
+    <div class="case-meta-item"><div class="case-meta-label">Project</div><div class="case-meta-value">Personal / 0 &rarr; 1</div></div>
+    <div class="case-meta-item"><div class="case-meta-label">Role</div><div class="case-meta-value">Product Designer &amp; Creator</div></div>
+    <div class="case-meta-item"><div class="case-meta-label">Timeline</div><div class="case-meta-value">4 days</div></div>
+    <div class="case-meta-item"><div class="case-meta-label">Platform</div><div class="case-meta-value">iOS (SwiftUI)</div></div>
+  </div>
+</div>
+
+<!-- Hero video -->
+<div class="case-hero-video fade-in">
+  <div class="video-card">
+    <video autoplay loop muted playsinline>
+      <source src="video/stillspace/stillspace-flow.mov" type="video/mp4">
+    </video>
+    <div class="video-card-label">Full app flow — from mood check-in to journaling and breathing mode</div>
+  </div>
+</div>
+
+<!-- Results -->
+<div class="case-section fade-in">
+  <h2>Highlights</h2>
+  <div class="results-grid">
+    <div class="result-card"><div class="result-num">4 days</div><div class="result-text">From idea to App Store submission — vision, design, code, and content</div></div>
+    <div class="result-card"><div class="result-num">0 &rarr; 1</div><div class="result-text">Built from scratch — product strategy, UX, visual identity, and tone of voice</div></div>
+    <div class="result-card"><div class="result-num">AI-native</div><div class="result-text">Designed and developed with Claude as a creative and engineering partner</div></div>
+    <div class="result-card"><div class="result-num">100%</div><div class="result-text">Privacy-first — zero data collection, no accounts, fully offline</div></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- Why This Exists -->
+<div class="case-section fade-in">
+  <h2>Why This Product Exists</h2>
+  <p>Most mental health apps are built around productivity: streaks, goals, daily habits. They work well for people with moderate stress. But for someone in a depressive episode — when getting out of bed is a victory — these apps feel like another thing to fail at.</p>
+  <p>I wanted to create something different: a companion that meets you where you are, with zero pressure and zero judgment. Not a therapy replacement, but a quiet place to land when you need one.</p>
+
+  <h3>The problem space</h3>
+  <ul>
+    <li><strong>Depression affects 280M+ people globally</strong> (WHO, 2023) — yet most digital tools focus on prevention, not support during episodes</li>
+    <li><strong>Burnout is rising</strong> — 77% of professionals report burnout at their current job (Deloitte, 2024), with emotional exhaustion as the #1 symptom</li>
+    <li><strong>Existing apps create pressure</strong> — streak-based gamification punishes users for "bad days" instead of supporting them</li>
+    <li><strong>Privacy concerns</strong> — 81% of mental health app users worry about data sharing (Mozilla Foundation, 2023); most apps fail basic privacy standards</li>
+  </ul>
+
+  <h3>Target audience</h3>
+  <ul>
+    <li>People living with depression, burnout, and emotional overload</li>
+    <li>Users experiencing apathy or severe fatigue — when even small tasks feel overwhelming</li>
+    <li>Anyone seeking mental health support without judgment, tracking, or performance pressure</li>
+  </ul>
+</div>
+
+<hr class="divider">
+
+<!-- Design Philosophy -->
+<div class="case-section fade-in">
+  <h2>Design Philosophy</h2>
+  <p>Every design decision in StillSpace starts from one question: <em>"Would this feel safe for someone on their worst day?"</em></p>
+
+  <h3>Core principles</h3>
+  <ul>
+    <li><strong>Warmth first:</strong> Warm palette (peach, lavender, soft grays), rounded shapes, zero visual aggression. The interface should feel like a hug — never push, never rush</li>
+    <li><strong>Gentle clarity:</strong> One screen, one action. Minimal cognitive load. Copy is caring, not clinical — it acknowledges struggle without judgment</li>
+    <li><strong>Quiet delight:</strong> Subtle micro-interactions — a heartbeat haptic in breathing mode, soft confetti after completing a self-care action. Celebrations feel earned and intimate</li>
+    <li><strong>No toxic positivity:</strong> The app never says "stay positive" or "you've got this." Instead: "Just being is already huge work. You're doing it."</li>
+  </ul>
+</div>
+
+<hr class="divider">
+
+<!-- App Flow -->
+<div class="case-section fade-in">
+  <h2>App Flow</h2>
+  <p>The core experience adapts to how the user feels right now — not a fixed routine, but a responsive companion.</p>
+
+  <h3>Mood check-in</h3>
+  <p>Three energy levels — no complex questionnaires, no clinical scales. Just an honest, low-friction question: "How are you feeling right now?"</p>
+  <div style="overflow-x:auto;scroll-snap-type:x mandatory;display:flex;gap:20px;padding:20px 0 32px;">
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-1.png" alt="Mood check-in — energy level selection" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-1-1.png" alt="Mood check-in — heavy day selected" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-2.png" alt="Mood check-in — managing state" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-3.png" alt="Mood check-in — feeling okay" loading="lazy"></div>
+  </div>
+
+  <h3>Adaptive actions</h3>
+  <p>Based on energy level, the app suggests micro-activities — from "place your hand on your chest" (low energy) to "go outside, buy coffee" (more energy). ~150 tasks, randomized and never repeated in a session. No pressure — you can skip or stop anytime.</p>
+
+  <h3>Just Be Together</h3>
+  <p>For when you can't do anything — and that's okay. A breathing circle with gentle animation, heartbeat haptics, and ambient sound. No instructions, no timers. Just presence.</p>
+
+  <h3>Journal &amp; insights</h3>
+  <p>A private diary with mood trends, completed action history, and pattern detection. No prompts, no requirements. Write when you want — or don't.</p>
+  <div style="display:flex;justify-content:center;padding:20px 0 32px;">
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/2-diary.png" alt="Journal — mood chart and action history" loading="lazy"></div>
+  </div>
+
+  <h3>Crisis support</h3>
+  <p>Verified helpline numbers always one tap away — contextualized by language (Ukrainian, English, Russian). Direct access to professional psychological support.</p>
+</div>
+
+<hr class="divider">
+
+<!-- Building with AI -->
+<div class="case-section fade-in">
+  <h2>Building with AI</h2>
+  <p>StillSpace was designed and developed with Claude (Anthropic) as a creative and engineering partner. This wasn't about replacing design thinking — it was about amplifying it.</p>
+
+  <h3>What AI enabled</h3>
+  <ul>
+    <li><strong>Rapid prototyping:</strong> From concept sketches to working SwiftUI code in hours, not weeks</li>
+    <li><strong>Content creation at scale:</strong> ~150 localized self-care tasks across 3 energy levels and 3 languages, each carefully crafted for tone and clinical appropriateness</li>
+    <li><strong>Design system as code:</strong> Color tokens, typography, spacing — defined once in design, immediately reflected in production code</li>
+    <li><strong>Iteration speed:</strong> Testing ideas in real code instead of static mockups — seeing how animations feel, how copy reads in context, how flows connect</li>
+  </ul>
+
+  <h3>What stayed human</h3>
+  <ul>
+    <li><strong>Product vision:</strong> The "why" — understanding what people in crisis actually need, not what apps typically offer</li>
+    <li><strong>Emotional design:</strong> Tone of voice, visual warmth, the feeling of safety — these require empathy AI can support but not originate</li>
+    <li><strong>Ethical decisions:</strong> Privacy-first architecture, crisis resource verification, no gamification of suffering</li>
+    <li><strong>Curation:</strong> AI generates options; a designer decides what serves the user</li>
+  </ul>
+</div>
+
+<hr class="divider">
+
+<!-- Technical -->
+<div class="case-section fade-in">
+  <h2>Under the Hood</h2>
+  <ul>
+    <li><strong>SwiftUI</strong> — native iOS, zero external dependencies</li>
+    <li><strong>100% offline-first</strong> — optional iCloud sync for backup</li>
+    <li><strong>Zero data collection</strong> — no accounts, no analytics, no ads</li>
+    <li><strong>3 languages</strong> — Ukrainian, English, Russian</li>
+    <li><strong>Accessibility</strong> — WCAG AA contrast, Dynamic Type, VoiceOver, minimum 44pt touch targets</li>
+    <li><strong>Dark &amp; light themes</strong> — warm palette in both modes</li>
+  </ul>
+</div>
+
+<!-- Contact CTA -->
+<div style="max-width:var(--max-w);margin:0 auto;padding:0 32px 60px">
+  <hr class="divider">
+  <div class="contact-bar" style="padding:40px 0">
+    <h2>Want to discuss this project?</h2>
+    <p>I'd love to walk you through the details.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/riahuzova" target="_blank" class="btn btn-primary">Contact on LinkedIn &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Daria Riahuzova &middot; Senior Product Designer &middot; Warsaw, Poland</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
