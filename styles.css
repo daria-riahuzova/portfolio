@@ -321,10 +321,10 @@ section { max-width: var(--max-w); margin: 0 auto; padding: 80px 32px; }
   display: grid; grid-template-columns: 320px 1fr; gap: 60px; align-items: start;
 }
 .about-photo {
-  width: 100%; aspect-ratio: 3/4; border-radius: var(--radius);
+  border-radius: var(--radius);
   overflow: hidden;
 }
-.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.about-photo img { max-width: 100%; height: auto; display: block; }
 .about-text h2 { font-family: 'DM Serif Display', serif; font-size: 32px; margin-bottom: 20px; }
 .about-text p { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
 .about-text .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
