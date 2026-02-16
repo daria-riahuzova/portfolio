@@ -70,12 +70,28 @@
   <p>I wanted to create something different: a companion that meets you where you are, with zero pressure and zero judgment. Not a therapy replacement, but a quiet place to land when you need one.</p>
 
   <h3>The problem space</h3>
-  <ul>
-    <li><strong>Depression affects 280M+ people globally</strong> (WHO, 2023) — yet most digital tools focus on prevention, not support during episodes</li>
-    <li><strong>Burnout is rising</strong> — 77% of professionals report burnout at their current job (Deloitte, 2024), with emotional exhaustion as the #1 symptom</li>
-    <li><strong>Existing apps create pressure</strong> — streak-based gamification punishes users for "bad days" instead of supporting them</li>
-    <li><strong>Privacy concerns</strong> — 81% of mental health app users worry about data sharing (Mozilla Foundation, 2023); most apps fail basic privacy standards</li>
-  </ul>
+  <div class="stat-cards">
+    <div class="stat-card">
+      <div class="stat-card-num">280M+</div>
+      <div class="stat-card-text">People globally affected by depression — yet most digital tools focus on prevention, not support during episodes</div>
+      <div class="stat-card-source">WHO, 2023</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-num">77%</div>
+      <div class="stat-card-text">Of professionals report burnout at their current job, with emotional exhaustion as the #1 symptom</div>
+      <div class="stat-card-source">Deloitte, 2024</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-num">81%</div>
+      <div class="stat-card-text">Of mental health app users worry about data sharing — most apps fail basic privacy standards</div>
+      <div class="stat-card-source">Mozilla Foundation, 2023</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-num">0</div>
+      <div class="stat-card-text">Apps designed specifically for depressive episodes — existing solutions punish "bad days" with broken streaks instead of supporting them</div>
+      <div class="stat-card-source">Market gap</div>
+    </div>
+  </div>
 
   <h3>Target audience</h3>
   <ul>
@@ -87,10 +103,44 @@
 
 <hr class="divider">
 
+<!-- UX Tone & Voice -->
+<div class="case-section fade-in">
+  <h2>UX Tone &amp; Voice</h2>
+  <p>Every word in StillSpace is a design decision. The voice is caring, calm, and accepting.</p>
+  <p class="tone-intro">Role: not a therapist, not a coach — a person sitting beside you.</p>
+
+  <div class="tone-grid">
+    <div class="tone-card dont">
+      <div class="tone-card-label">Forbidden patterns</div>
+      <ul>
+        <li>"Start your day right"</li>
+        <li>"Pull yourself together"</li>
+        <li>"You can do it!"</li>
+        <li>"Try harder"</li>
+        <li>"Stay positive"</li>
+        <li>"Don't give up"</li>
+      </ul>
+    </div>
+    <div class="tone-card do">
+      <div class="tone-card-label">Permitted patterns</div>
+      <ul>
+        <li>"If it works — great"</li>
+        <li>"If not — that's okay"</li>
+        <li>"Let's just try"</li>
+        <li>"No rush"</li>
+        <li>"Just being is already huge work"</li>
+        <li>"You have the right to feel what you feel"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
 <!-- Design Philosophy -->
 <div class="case-section fade-in">
   <h2>Design Philosophy</h2>
-  <p>Every design decision in StillSpace starts from one question: <em>"Would this feel safe for someone on their worst day?"</em></p>
+  <p>Every design decision starts from one question: <em>"Would this feel safe for someone on their worst day?"</em></p>
 
   <h3>Core principles</h3>
   <ul>
@@ -103,31 +153,93 @@
 
 <hr class="divider">
 
+<!-- Design System -->
+<div class="case-section fade-in">
+  <h2>Design System</h2>
+  <p>A compact, purposeful design system — every token chosen for emotional safety and accessibility.</p>
+
+  <div class="ds-showcase">
+    <div class="ds-card">
+      <div class="ds-card-title">Color palette</div>
+      <div class="ds-colors">
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#8B7AB8"></div><div class="ds-swatch-label">Primary</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#E8B89A"></div><div class="ds-swatch-label">Accent</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#75AA7B"></div><div class="ds-swatch-label">Success</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#FFF5EB"></div><div class="ds-swatch-label">BG Light</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#1A1612"></div><div class="ds-swatch-label">BG Dark</div></div>
+      </div>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card-title">Mood states</div>
+      <div class="ds-colors">
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#E66666"></div><div class="ds-swatch-label">Safe</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#F2CC66"></div><div class="ds-swatch-label">Gentle</div></div>
+        <div class="ds-swatch"><div class="ds-swatch-circle" style="background:#80D999"></div><div class="ds-swatch-label">Air</div></div>
+      </div>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card-title">Typography</div>
+      <div class="ds-type-sample">
+        <div class="ds-type-preview" style="font-family:Georgia,serif">Merriweather Bold</div>
+        <div class="ds-type-meta">Headings &middot; Warm, supportive, serif</div>
+      </div>
+      <div class="ds-type-sample">
+        <div class="ds-type-preview" style="font-family:-apple-system,sans-serif;font-weight:400">SF Pro Regular</div>
+        <div class="ds-type-meta">Body &middot; Clean, accessible, system-native</div>
+      </div>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card-title">Spacing &amp; radii</div>
+      <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:32px"></div><div class="ds-spacing-label">8pt &middot; xs</div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:64px"></div><div class="ds-spacing-label">16pt &middot; md</div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:96px"></div><div class="ds-spacing-label">24pt &middot; xl</div></div>
+      <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:160px"></div><div class="ds-spacing-label">40pt &middot; xxxl</div></div>
+      <div style="margin-top:12px">
+        <div class="ds-type-meta">Cards: 16pt &middot; Buttons: 12pt &middot; Modals: 20pt</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
 <!-- App Flow -->
 <div class="case-section fade-in">
   <h2>App Flow</h2>
   <p>The core experience adapts to how the user feels right now — not a fixed routine, but a responsive companion.</p>
 
-  <h3>Mood check-in</h3>
-  <p>Three energy levels — no complex questionnaires, no clinical scales. Just an honest, low-friction question: "How are you feeling right now?"</p>
-  <div style="overflow-x:auto;scroll-snap-type:x mandatory;display:flex;gap:20px;padding:20px 0 32px;">
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-1.png" alt="Mood check-in — energy level selection" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-1-1.png" alt="Mood check-in — heavy day selected" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-2.png" alt="Mood check-in — managing state" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/1-mood-3.png" alt="Mood check-in — feeling okay" loading="lazy"></div>
-  </div>
+  <h3>Mood check-in &rarr; Adaptive actions &rarr; Journal</h3>
+  <p>Three energy levels. No complex questionnaires. The app responds with micro-activities matched to your current state — from "place your hand on your chest" to "go outside, buy coffee."</p>
 
-  <h3>Adaptive actions</h3>
-  <p>Based on energy level, the app suggests micro-activities — from "place your hand on your chest" (low energy) to "go outside, buy coffee" (more energy). ~150 tasks, randomized and never repeated in a session. No pressure — you can skip or stop anytime.</p>
+  <div class="flow-strip">
+    <div>
+      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-1.png" alt="Mood check-in — select energy level" loading="lazy"></div>
+      <div class="flow-label">Check-in</div>
+    </div>
+    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div>
+      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-1-1.png" alt="Energy level — heavy day" loading="lazy"></div>
+      <div class="flow-label">Energy level</div>
+    </div>
+    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div>
+      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-2.png" alt="Adaptive action suggestion" loading="lazy"></div>
+      <div class="flow-label">Action</div>
+    </div>
+    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div>
+      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/1-mood-3.png" alt="Completion — small win recorded" loading="lazy"></div>
+      <div class="flow-label">Small win</div>
+    </div>
+    <div class="flow-arrow"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div>
+      <div class="phone-mockup" style="width:280px"><img src="images/stillspace/2-diary.png" alt="Journal — mood chart and insights" loading="lazy"></div>
+      <div class="flow-label">Journal</div>
+    </div>
+  </div>
 
   <h3>Just Be Together</h3>
   <p>For when you can't do anything — and that's okay. A breathing circle with gentle animation, heartbeat haptics, and ambient sound. No instructions, no timers. Just presence.</p>
-
-  <h3>Journal &amp; insights</h3>
-  <p>A private diary with mood trends, completed action history, and pattern detection. No prompts, no requirements. Write when you want — or don't.</p>
-  <div style="display:flex;justify-content:center;padding:20px 0 32px;">
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/2-diary.png" alt="Journal — mood chart and action history" loading="lazy"></div>
-  </div>
 
   <h3>Crisis support</h3>
   <p>Verified helpline numbers always one tap away — contextualized by language (Ukrainian, English, Russian). Direct access to professional psychological support.</p>
