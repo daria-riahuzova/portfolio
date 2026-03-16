@@ -140,7 +140,7 @@
         </tr>
         <tr>
           <td>Adaptive to energy level</td>
-          <td class="comp-highlight"><span class="comp-check">&check;</span> 3 modes</td>
+          <td class="comp-highlight"><span class="comp-check">&check;</span> 4 levels</td>
           <td><span class="comp-cross">&cross;</span></td>
           <td><span class="comp-cross">&cross;</span></td>
           <td><span class="comp-cross">&cross;</span></td>
@@ -156,7 +156,7 @@
         </tr>
         <tr>
           <td>Crisis resources built-in</td>
-          <td class="comp-highlight"><span class="comp-check">&check;</span> Hotlines in 3 languages</td>
+          <td class="comp-highlight"><span class="comp-check">&check;</span> Hotlines in 6 countries</td>
           <td><span class="comp-cross">&cross;</span> Redirects to 911</td>
           <td><span class="comp-cross">&cross;</span></td>
           <td><span class="comp-cross">&cross;</span></td>
@@ -164,7 +164,7 @@
         </tr>
         <tr>
           <td>Actionable micro-tasks</td>
-          <td class="comp-highlight"><span class="comp-check">&check;</span> 80+ tasks by energy level</td>
+          <td class="comp-highlight"><span class="comp-check">&check;</span> ~150 tasks by energy level</td>
           <td><span class="comp-partial">Meditation only</span></td>
           <td><span class="comp-partial">Meditation only</span></td>
           <td><span class="comp-cross">&cross;</span> Logging only</td>
@@ -258,112 +258,179 @@
 <!-- App Flow -->
 <div class="case-section fade-in">
   <h2>App Flow</h2>
-  <p>The experience adapts to how you feel right now. Three energy levels, no questionnaires — the app responds with micro-activities matched to your current state.</p>
+  <p>The experience adapts to how you feel right now. Four energy levels, no questionnaires — the app responds with micro-activities matched to your current state.</p>
 
   <div style="text-align:center;margin:32px 0">
-    <svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;height:auto">
+    <svg viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;height:auto">
       <defs>
         <marker id="ah" viewBox="0 0 10 7" refX="9" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7" fill="#C8C0B8"/></marker>
         <marker id="ahd" viewBox="0 0 10 7" refX="9" refY="3.5" markerWidth="8" markerHeight="6" orient="auto"><path d="M0,0 L10,3.5 L0,7" fill="#D4D0CC"/></marker>
       </defs>
 
-      <!-- ===== MAIN FLOW (left, cx=165) ===== -->
+      <!-- ===== TAB BAR (top) ===== -->
+      <rect x="100" y="4" width="500" height="28" rx="6" fill="#F5F0EB"/>
+      <text x="200" y="22" text-anchor="middle" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="11" font-weight="700">Space</text>
+      <text x="320" y="22" text-anchor="middle" fill="#999" font-family="DM Sans,sans-serif" font-size="11" font-weight="500">Diary</text>
+      <text x="430" y="22" text-anchor="middle" fill="#999" font-family="DM Sans,sans-serif" font-size="11" font-weight="500">Support</text>
+      <text x="530" y="22" text-anchor="middle" fill="#999" font-family="DM Sans,sans-serif" font-size="11" font-weight="500">Settings</text>
+
+      <!-- ===== HOME SCREEN ===== -->
+      <rect x="110" y="44" width="180" height="40" rx="8" fill="#8B7AB8"/>
+      <text x="200" y="69" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="700">Home Screen</text>
+
+      <!-- ===== LEFT BRANCH: Mood check-in flow ===== -->
+      <line x1="200" y1="84" x2="200" y2="102" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
 
       <!-- Mood Check-in -->
-      <rect x="90" y="8" width="150" height="40" rx="8" fill="#8B7AB8"/>
-      <text x="165" y="33" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Mood Check-in</text>
+      <rect x="110" y="104" width="180" height="36" rx="8" fill="#8B7AB8"/>
+      <text x="200" y="127" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Mood Check-in</text>
 
-      <!-- Arrow down -->
-      <line x1="165" y1="48" x2="165" y2="70" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <!-- Arrow down to levels -->
+      <line x1="200" y1="140" x2="200" y2="156" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
 
       <!-- Energy levels -->
-      <rect x="35" y="72" width="68" height="26" rx="6" fill="#A594CC"/>
-      <text x="69" y="89" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Safe</text>
-      <rect x="131" y="72" width="68" height="26" rx="6" fill="#A594CC"/>
-      <text x="165" y="89" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Gentle</text>
-      <rect x="227" y="72" width="68" height="26" rx="6" fill="#A594CC"/>
-      <text x="261" y="89" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Air</text>
+      <rect x="30" y="158" width="58" height="22" rx="5" fill="#A594CC"/>
+      <text x="59" y="173" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="9" font-weight="600">Heavy</text>
+      <rect x="96" y="158" width="58" height="22" rx="5" fill="#A594CC"/>
+      <text x="125" y="173" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="9" font-weight="600">Hard</text>
+      <rect x="162" y="158" width="58" height="22" rx="5" fill="#A594CC"/>
+      <text x="191" y="173" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="9" font-weight="600">Okay</text>
+      <rect x="228" y="158" width="58" height="22" rx="5" fill="#A594CC"/>
+      <text x="257" y="173" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="9" font-weight="600">Good</text>
 
-      <!-- Converge to Action -->
-      <line x1="69" y1="98" x2="165" y2="112" stroke="#C8C0B8" stroke-width="1.2"/>
-      <line x1="165" y1="98" x2="165" y2="112" stroke="#C8C0B8" stroke-width="1.2"/>
-      <line x1="261" y1="98" x2="165" y2="112" stroke="#C8C0B8" stroke-width="1.2"/>
-      <line x1="165" y1="112" x2="165" y2="120" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <!-- Converge to Emotion Tags -->
+      <line x1="59" y1="180" x2="160" y2="194" stroke="#C8C0B8" stroke-width="1"/>
+      <line x1="125" y1="180" x2="160" y2="194" stroke="#C8C0B8" stroke-width="1"/>
+      <line x1="191" y1="180" x2="160" y2="194" stroke="#C8C0B8" stroke-width="1"/>
+      <line x1="257" y1="180" x2="240" y2="194" stroke="#C8C0B8" stroke-width="1"/>
+      <line x1="160" y1="194" x2="160" y2="202" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
 
-      <!-- Action Card (peach) -->
-      <rect x="90" y="122" width="150" height="40" rx="8" fill="#E8B89A"/>
-      <text x="165" y="147" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Action Card</text>
+      <!-- Emotion Tags -->
+      <rect x="70" y="204" width="180" height="36" rx="8" fill="#D4C8E8"/>
+      <text x="160" y="220" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="12" font-weight="600">Emotion Tags</text>
+      <text x="160" y="234" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">7 words per level · multi-select</text>
 
-      <!-- Try other loop -->
-      <path d="M240,135 C262,135 262,150 244,155" stroke="#C8C0B8" stroke-width="1.2" fill="none" stroke-dasharray="3,2" marker-end="url(#ahd)"/>
-      <text x="272" y="147" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="9" font-weight="500">Try other</text>
+      <!-- Branch: Good level goes to Gratitude -->
+      <path d="M240,194 L310,210" stroke="#C8C0B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ahd)"/>
+      <rect x="300" y="204" width="120" height="36" rx="8" fill="#D4C8E8"/>
+      <text x="360" y="220" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Gratitude Input</text>
+      <text x="360" y="233" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">Good level only</text>
+      <!-- Arrow from Gratitude to Anchor -->
+      <path d="M360,240 V260" stroke="#C8C0B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ahd)"/>
+      <rect x="300" y="262" width="120" height="30" rx="8" fill="#75AA7B"/>
+      <text x="360" y="282" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Save Anchor</text>
 
-      <!-- Arrow down + label -->
-      <line x1="165" y1="162" x2="165" y2="188" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
-      <text x="178" y="179" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="9" font-weight="500">Start</text>
+      <!-- Arrow down from Emotion Tags to Action Cards (Heavy/Hard/Okay) -->
+      <line x1="160" y1="240" x2="160" y2="258" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <text x="143" y="253" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="8" font-weight="500">Let's try</text>
 
-      <!-- In Progress (peach) -->
-      <rect x="90" y="190" width="150" height="40" rx="8" fill="#E8B89A"/>
-      <text x="165" y="215" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">In Progress</text>
+      <!-- Action Cards -->
+      <rect x="70" y="260" width="180" height="44" rx="8" fill="#E8B89A"/>
+      <text x="160" y="280" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="12" font-weight="600">Action Cards</text>
+      <text x="160" y="296" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">At Home · Outside · At Work</text>
 
-      <!-- Arrow down + label -->
-      <line x1="165" y1="230" x2="165" y2="256" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
-      <text x="178" y="247" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="9" font-weight="500">Done</text>
+      <!-- Swipe loop -->
+      <path d="M250,275 C274,275 274,292 256,297" stroke="#C8C0B8" stroke-width="1.2" fill="none" stroke-dasharray="3,2" marker-end="url(#ahd)"/>
+      <text x="282" y="288" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="9" font-weight="500">Swipe</text>
 
-      <!-- Completion (green) -->
-      <rect x="90" y="258" width="150" height="40" rx="8" fill="#75AA7B"/>
-      <text x="165" y="283" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Completion</text>
+      <!-- Arrow down to Pending -->
+      <line x1="160" y1="304" x2="160" y2="322" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <text x="143" y="317" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="8" font-weight="500">I'll try</text>
 
-      <!-- Arrow to Journal -->
-      <path d="M165,298 V328 H228" stroke="#C8C0B8" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
+      <!-- Pending Action (back on Home) -->
+      <rect x="70" y="324" width="180" height="36" rx="8" fill="#E8B89A"/>
+      <text x="160" y="340" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="12" font-weight="600">Pending Action</text>
+      <text x="160" y="354" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">shown on Home next visit</text>
 
-      <!-- ===== JOURNAL (bottom center, purple) ===== -->
-      <rect x="235" y="318" width="150" height="40" rx="8" fill="#8B7AB8"/>
-      <text x="310" y="343" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Journal</text>
+      <!-- Arrow down -->
+      <line x1="160" y1="360" x2="160" y2="378" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <text x="143" y="373" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="8" font-weight="500">Done</text>
 
-      <!-- ===== SIDE PATHS (right, cx=470) ===== -->
+      <!-- Completion -->
+      <rect x="70" y="380" width="180" height="44" rx="8" fill="#75AA7B"/>
+      <text x="160" y="398" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Completion</text>
+      <text x="160" y="416" text-anchor="middle" fill="#D8ECD9" font-family="DM Sans,sans-serif" font-size="8">confetti · anchor · encouragement</text>
 
-      <!-- Branch spine from Mood -->
-      <path d="M240,28 H358" stroke="#C8C0B8" stroke-width="1.2" stroke-dasharray="4,3"/>
-      <line x1="358" y1="28" x2="358" y2="258" stroke="#C8C0B8" stroke-width="1.2" stroke-dasharray="4,3"/>
+      <!-- Try more loop -->
+      <path d="M70,395 C46,395 46,290 68,285" stroke="#C8C0B8" stroke-width="1.2" fill="none" stroke-dasharray="3,2" marker-end="url(#ahd)"/>
+      <text x="28" y="345" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="9" font-weight="500" transform="rotate(-90,28,345)">Try more</text>
 
-      <!-- Branch tick → Be Together -->
-      <line x1="358" y1="85" x2="393" y2="85" stroke="#C8C0B8" stroke-width="1.2" marker-end="url(#ah)"/>
-      <!-- Branch tick → Quick Record -->
-      <line x1="358" y1="258" x2="393" y2="258" stroke="#C8C0B8" stroke-width="1.2" marker-end="url(#ah)"/>
+      <!-- "Couldn't" path from Pending -->
+      <path d="M250,337 L288,337" stroke="#C8C0B8" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#ahd)"/>
+      <rect x="290" y="322" width="120" height="36" rx="8" fill="#E8D6CC"/>
+      <text x="350" y="338" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">It's Okay</text>
+      <text x="350" y="352" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">gentle fallback</text>
 
-      <!-- Be Together (peach) -->
-      <rect x="395" y="65" width="150" height="40" rx="8" fill="#E8B89A"/>
-      <text x="470" y="90" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Just Be Together</text>
+      <!-- Arrow from Completion down to Journal -->
+      <path d="M160,424 V454 H285" stroke="#C8C0B8" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>
 
-      <!-- Arrow down to Breathing -->
-      <line x1="470" y1="105" x2="470" y2="125" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <!-- ===== RIGHT BRANCH: Quick-access from Home ===== -->
 
-      <!-- Breathing Circle (peach) -->
-      <rect x="395" y="127" width="150" height="40" rx="8" fill="#E8B89A"/>
-      <text x="470" y="152" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Breathing Circle</text>
+      <!-- Arrow right from Home to quick-access -->
+      <path d="M290,64 L450,64" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <text x="370" y="58" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="9" font-weight="500">Quick access</text>
 
-      <!-- Arrow from Breathing to Crisis Support -->
-      <line x1="470" y1="167" x2="470" y2="189" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <!-- Just Be Here With Me -->
+      <rect x="455" y="44" width="190" height="40" rx="8" fill="#E8B89A"/>
+      <text x="550" y="62" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Just Be Here With Me</text>
+      <text x="550" y="77" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">always free</text>
 
-      <!-- Crisis Support (purple) -->
-      <rect x="395" y="191" width="150" height="40" rx="8" fill="#8B7AB8"/>
-      <text x="470" y="216" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Crisis Support</text>
+      <!-- Arrow down -->
+      <line x1="550" y1="84" x2="550" y2="100" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
 
-      <!-- Quick Record (green) -->
-      <rect x="395" y="238" width="150" height="40" rx="8" fill="#75AA7B"/>
-      <text x="470" y="263" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Quick Record</text>
+      <!-- Breathing + Sounds -->
+      <rect x="455" y="102" width="190" height="44" rx="8" fill="#E8B89A"/>
+      <text x="550" y="120" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="12" font-weight="600">Breathing Circle</text>
+      <text x="550" y="138" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">Rain · Ocean · Fireplace · Wind · Night</text>
+
+      <!-- Arrow to Support -->
+      <line x1="550" y1="146" x2="550" y2="162" stroke="#C8C0B8" stroke-width="1.5" marker-end="url(#ah)"/>
+      <text x="565" y="158" fill="#8B7AB8" font-family="DM Sans,sans-serif" font-size="8" font-weight="500">after 5s</text>
+
+      <!-- Get Support link -->
+      <rect x="475" y="164" width="150" height="30" rx="8" fill="#8B7AB8"/>
+      <text x="550" y="184" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Get Support → tab</text>
+
+      <!-- Note What You Got Through -->
+      <rect x="455" y="214" width="190" height="36" rx="8" fill="#75AA7B"/>
+      <text x="550" y="230" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Note What You Got Through</text>
+      <text x="550" y="244" text-anchor="middle" fill="#D8ECD9" font-family="DM Sans,sans-serif" font-size="8">quick wins · saves to journal</text>
 
       <!-- Arrow from Quick Record to Journal -->
-      <path d="M470,278 V328 H390" stroke="#C8C0B8" stroke-width="1.2" fill="none" stroke-dasharray="4,3" marker-end="url(#ahd)"/>
+      <path d="M550,250 V454 H445" stroke="#C8C0B8" stroke-width="1.2" fill="none" stroke-dasharray="4,3" marker-end="url(#ahd)"/>
+
+      <!-- Let It Out -->
+      <rect x="455" y="270" width="190" height="44" rx="8" fill="#E8B89A"/>
+      <text x="550" y="290" text-anchor="middle" fill="#2C2218" font-family="DM Sans,sans-serif" font-size="11" font-weight="600">Let It Out and Let It Go</text>
+      <text x="550" y="306" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="8">expressive writing · text dissolves</text>
+
+      <!-- ===== JOURNAL (bottom center) ===== -->
+      <rect x="290" y="440" width="150" height="44" rx="8" fill="#8B7AB8"/>
+      <text x="365" y="458" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="500">Diary tab</text>
+      <text x="365" y="474" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="700">Journal</text>
+
+      <!-- Journal details -->
+      <text x="365" y="500" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">Day · Week · Month · 6 months</text>
+      <text x="365" y="514" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">Mood chart · Insights · Anchors · Actions log</text>
+
+      <!-- ===== SUPPORT TAB (bottom right) ===== -->
+      <rect x="490" y="440" width="160" height="44" rx="8" fill="#8B7AB8"/>
+      <text x="570" y="458" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="11" font-weight="500">Support tab</text>
+      <text x="570" y="474" text-anchor="middle" fill="#fff" font-family="DM Sans,sans-serif" font-size="13" font-weight="700">Crisis Hotlines</text>
+      <text x="570" y="500" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">US · Ukraine · Poland · Germany</text>
+      <text x="570" y="514" text-anchor="middle" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">Czechia · International</text>
 
       <!-- ===== LEGEND ===== -->
-      <circle cx="130" cy="385" r="5" fill="#8B7AB8"/>
-      <text x="142" y="389" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="10">Navigation &amp; tracking</text>
-      <circle cx="280" cy="385" r="5" fill="#E8B89A"/>
-      <text x="292" y="389" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="10">Action flow</text>
-      <circle cx="390" cy="385" r="5" fill="#75AA7B"/>
-      <text x="402" y="389" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="10">Achievement</text>
+      <circle cx="70" cy="546" r="5" fill="#8B7AB8"/>
+      <text x="80" y="550" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">Navigation &amp; tracking</text>
+      <circle cx="200" cy="546" r="5" fill="#E8B89A"/>
+      <text x="210" y="550" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">Action flow</text>
+      <circle cx="300" cy="546" r="5" fill="#75AA7B"/>
+      <text x="310" y="550" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">Achievement</text>
+      <circle cx="400" cy="546" r="5" fill="#D4C8E8"/>
+      <text x="410" y="550" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">User input</text>
+      <circle cx="500" cy="546" r="5" fill="#E8D6CC"/>
+      <text x="510" y="550" fill="#6B6B6B" font-family="DM Sans,sans-serif" font-size="9">Gentle fallback</text>
     </svg>
   </div>
 </div>
@@ -374,42 +441,29 @@
 <div class="case-section fade-in">
   <h2>Key Screens</h2>
 
-  <h3>Onboarding</h3>
-  <p>First impression sets the emotional contract. The onboarding sequence doesn't collect data or push sign-ups — it builds trust. Each screen introduces the app's core promise through calm visuals and minimal copy, letting users self-select their entry point. The flow respects autonomy: no forced tutorials, no guilt-driven streaks. Just a gentle orientation that mirrors the product's therapeutic tone from the very first tap.</p>
+  <h3>Mood Check-in &amp; Emotion Tags</h3>
+  <p>The entry point adapts to how you feel right now. Four energy levels — Heavy, Hard, Okay, Good — each with its own set of 7 emotion words to choose from. For Heavy: emptiness, hopelessness, guilt. For Okay: calm, hope, gratitude. The Good level skips actions entirely and prompts a gratitude input — because on good days, the best thing you can do is anchor the feeling. Below the check-in, three quick-access cards are always available: "Just be here with me" for breathing and presence, "Note what you got through" for recording small wins, and "Let it out and let it go" for expressive writing that dissolves after release.</p>
   <div class="screens-row">
-<div class="phone-mockup" style="width:320px"><img src="images/stillspace/onboarding-1.png" alt="Onboarding — core value" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/onboarding-2.png" alt="Onboarding — feature intro" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/onboarding-3.png" alt="Onboarding — get started" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/landing-home.png" alt="Mood check-in — How are you today?" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/landing-emotions.png" alt="Emotion tagging — anxious, tired, sad, overwhelmed" loading="lazy"></div>
   </div>
 
-  <h3>Mood Check-in &amp; Micro-actions</h3>
-  <p>The entry point: three energy levels, two quick-access modes, zero pressure. The app responds with ~150 gentle self-care tasks matched to how you feel — from "lean your back against something" to "go outside, buy coffee."</p>
+  <h3>Micro-actions</h3>
+  <p>After selecting emotions, the app suggests gentle self-care tasks matched to your energy level and context — filterable by location: At Home, Outside, or At Work. Each card shows a category (Breathing &amp; Body, Basic Care, Warmth &amp; Comfort...), a description, and a low-pressure "I'll try this" button. Choosing an action saves it as a pending task — when you return to the app, it's waiting for you on the home screen with a simple "Done" or "Skip."</p>
   <div class="screens-row">
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/light-1-mood-1.png" alt="Mood check-in — light theme" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/dark-1-mood-1.png" alt="Mood check-in — dark theme" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/dark-1-mood-1-1.png" alt="Micro-action suggestion" loading="lazy"></div>
-  </div>
-
-  <h3>Completion &amp; Reflection</h3>
-  <p>Every completed action is a small victory. Confetti, encouragement, and a prompt to leave a supportive note for your future self — an "anchor" to hold onto during harder days.</p>
-  <div class="screens-row">
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/light-1-mood-1-1.png" alt="Completion screen — light theme" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/dark-1-mood-2.png" alt="Completion screen — dark theme" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/landing-actions.png" alt="Micro-action cards — brush teeth, basic care" loading="lazy"></div>
   </div>
 
   <h3>Just Be Together</h3>
-  <p>For when you can't do anything — a breathing circle with heartbeat haptics and ambient sound. No instructions, no timers. Just presence. After 5 seconds, a gentle link to crisis support appears.</p>
+  <p>For when you can't do anything — a pulsing breathing circle with heartbeat haptics and ambient soundscapes: Rain, Ocean, Fireplace, Wind, Night. No instructions, no timers. Just presence. After 5 seconds, a gentle link to crisis support appears — always accessible, never forced. This mode is always free, no paywall.</p>
   <div class="screens-row">
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/light-1-mood-3.png" alt="Breathing mode — light theme" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/dark-1-mood-3.png" alt="Breathing mode — dark theme" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/landing-presence.png" alt="Just be together — breathing mode with ambient sounds" loading="lazy"></div>
   </div>
 
-  <h3>Journal &amp; Quick Record</h3>
-  <p>Mood tracking with day/week/month charts and pattern insights. Record small wins anytime — opened a window, drank water.</p>
+  <h3>Journal &amp; Insights</h3>
+  <p>Mood tracking with day/week/month/6-month views and pattern insights. The diary surfaces gentle observations — "Usually you feel better mid-month," "Your mood is stable" — turning raw data into reassurance. Below the chart, a timeline of completed micro-actions and saved anchors (gratitude notes from good days that reappear as support during hard ones).</p>
   <div class="screens-row">
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/light-2-diary.png" alt="Journal — light theme" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/dark-2-diary.png" alt="Journal — dark theme" loading="lazy"></div>
-    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/light-1-mood-4.png" alt="Quick record — small wins" loading="lazy"></div>
+    <div class="phone-mockup" style="width:320px"><img src="images/stillspace/landing-diary.png" alt="Journal — mood chart and insights" loading="lazy"></div>
   </div>
 </div>
 
@@ -423,7 +477,7 @@
   <h3>What AI enabled</h3>
   <ul>
     <li><strong>Rapid prototyping:</strong> From concept sketches to working SwiftUI code in hours, not weeks</li>
-    <li><strong>Content creation at scale:</strong> ~150 localized self-care tasks across 3 energy levels and multiple languages, each carefully crafted for tone and clinical appropriateness</li>
+    <li><strong>Content creation at scale:</strong> ~150 localized self-care tasks across 3 energy levels and 3 languages, each carefully crafted for tone and clinical appropriateness</li>
     <li><strong>Design system as code:</strong> Color tokens, typography, spacing — defined once in design, immediately reflected in production code</li>
     <li><strong>Iteration speed:</strong> Testing ideas in real code instead of static mockups — seeing how animations feel, how copy reads in context, how flows connect</li>
   </ul>
@@ -446,7 +500,7 @@
     <li><strong>SwiftUI</strong> — native iOS, zero external dependencies</li>
     <li><strong>100% offline-first</strong> — optional iCloud sync for backup</li>
     <li><strong>Zero data collection</strong> — no accounts, no analytics, no ads</li>
-    <li><strong>Multilingual</strong> — Ukrainian and English</li>
+    <li><strong>Multilingual</strong> — Ukrainian, English, and Russian</li>
     <li><strong>Accessibility</strong> — WCAG AA contrast, Dynamic Type, VoiceOver, minimum 44pt touch targets</li>
     <li><strong>Dark &amp; light themes</strong> — warm palette in both modes</li>
   </ul>
